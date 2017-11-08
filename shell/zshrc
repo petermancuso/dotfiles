@@ -1,11 +1,8 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:/usr/local/anaconda3/bin:$PATH
 
-
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export SANS_ANACONDA="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-# added by Anaconda3 4.4.0 installer
-export PATH="/usr/local/anaconda3/bin:$SANS_ANACONDA"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/anaconda3/bin:$SANS_ANACONDA"
 
 alias anaconda_remove="export PATH="\$SANS_ANACONDA" && echo -e '\nAnaconda Directory Removed\n'"
 alias anaconda_add="export PATH="/usr/local/anaconda3/bin:\$SANS_ANACONDA" && echo -e '\nAnaconda Directory Added\n'"
