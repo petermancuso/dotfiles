@@ -1,8 +1,10 @@
 
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-export SANS_ANACONDA="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export SANS_ANACONDA="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/library/java/home/bin"
 
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/anaconda3/bin:$SANS_ANACONDA"
+
+
 
 alias anaconda_remove="export PATH="\$SANS_ANACONDA" && echo -e '\nAnaconda Directory Removed\n'"
 alias anaconda_add="export PATH="/usr/local/anaconda3/bin:\$SANS_ANACONDA" && echo -e '\nAnaconda Directory Added\n'"
