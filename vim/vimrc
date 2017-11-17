@@ -1,11 +1,11 @@
 execute pathogen#infect()
 syntax on
 set background=dark
-colorscheme solarized
-
-"set autoindent
+colorscheme darcula
+set autoindent
 set backspace=indent,eol,start
 "set complete-=i
+set clipboard=unnamedplus,unnamed
 
 " Settings when compiled with support for autocommands.
 if has("autocmd")
@@ -24,4 +24,32 @@ set tabstop=4       " The width of a TAB is set to 4.
 set shiftwidth=4    " Indents will have a width of 4.
 set softtabstop=4   " Sets the number of columns for a TAB.
 set expandtab       " Expand TABs to spaces.
-"
+
+" Show line numbers
+set number
+
+" Highlight cursor line
+set cursorline
+" alternate <Esc> key
+inoremap kj <Esc>
+
+" Map Leader key for custome commands
+let mapleader = ","
+let g:mapleader = ","
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Fast save and quit
+nmap <leader>q :wq<cr>
+
+" Map NERDTree
+nmap <leader>n :NERDTree<cr>
+" Map end and beginning
+nmap <leader>e $
+nmap <leader>b 0
+
+" No cache
+set nobackup
+set nowb
+set noswapfile
