@@ -1,18 +1,18 @@
 
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-export SANS_ANACONDA="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/library/java/home/bin"
+export SANS_PYTHON="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/library/java/home/bin"
 
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/anaconda3/bin:$SANS_ANACONDA"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/anaconda3/bin:$SANS_PYTHON"
 
 
 
-alias anaconda_remove="export PATH="\$SANS_ANACONDA" && echo -e '\nAnaconda Directory Removed\n'"
-alias anaconda_add="export PATH="/usr/local/anaconda3/bin:\$SANS_ANACONDA" && echo -e '\nAnaconda Directory Added\n'"
+alias python_remove="export PATH="\$SANS_PYTHON" && echo -e '\nPython Directory Removed\n'"
+alias python_add="export PATH="/usr/local/anaconda3/bin:\$SANS_PYTHON" && echo -e '\nPython  Directory Added\n'"
 
 brew () {
-  anaconda_remove
+  python_remove
   command brew "$@"
-  anaconda_add
+  python_add
 }
 
 
