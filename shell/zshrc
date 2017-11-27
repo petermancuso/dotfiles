@@ -3,7 +3,7 @@ export SANS_PYTHON="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/cellar/python3/3.6.3:$SANS_PYTHON"
 
 alias python_remove="export PATH="\$SANS_PYTHON" && echo -e '\nPython Directory Removed\n'"
-alias python_add="export PATH="/usr/local/anaconda3/bin:\$SANS_PYTHON" && echo -e '\nPython  Directory Added\n'"
+alias python_add="export PATH="/usr/local/cellar/python3:\$SANS_PYTHON" && echo -e '\nPython  Directory Added\n'"
 
 brew () {
   python_remove
@@ -14,7 +14,12 @@ brew () {
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/pm/.oh-my-zsh
-
+export APXS=/usr/local/opt/httpd/bin/apxs
+export PYTHONPATH=/usr/local/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/python
+source /usr/local/bin/virtualenvwrapper.sh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
